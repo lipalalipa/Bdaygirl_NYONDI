@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const ToDeuniContainer = styled.div`
+const ToNYONDIContainer = styled.div`
   background-color: #dbf1c9;
   min-height: 100vh;
   display: flex;
@@ -78,7 +78,7 @@ const MessageContainer = styled.div`
   flex-direction: column;
 `;
 
-const ToDeuniPage = () => {
+const ToNYONDIPage = () => {
   const [showInput, setShowInput] = useState(false);
   const [message, setMessage] = useState("");
   const [userMessages, setUserMessages] = useState<string[]>([]);
@@ -94,11 +94,11 @@ const ToDeuniPage = () => {
   };
 
   return (
-    <ToDeuniContainer>
+    <ToNYONDIContainer>
       <ImageWrapper>
         <StyledImage src="/images/E0.png" alt="설명" />
       </ImageWrapper>
-      <Title>드니에게 생일 축하 인사를 남겨보세요!</Title>
+      <Title>뇬디에게 생일 축하 인사를 남겨보세요!</Title>
       {showInput ? (
         <>
           <MessageInput
@@ -113,8 +113,8 @@ const ToDeuniPage = () => {
       {userMessages.map((userMessage, index) => (
         <MessageContainer key={index}>{userMessage}</MessageContainer>
       ))}
-    </ToDeuniContainer>
+    </ToNYONDIContainer>
   );
 };
 
-export default ToDeuniPage;
+export default ToNYONDIPage;
